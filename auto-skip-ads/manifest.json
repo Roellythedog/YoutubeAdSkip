@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Skip Ads (YouTube)",
+  "version": "1.0.0",
+  "description": "Automatically clicks the Skip Ad button on YouTube as soon as it appears, and speeds through non-skippable ads.",
+  "permissions": [],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "Auto Skip Ads",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
